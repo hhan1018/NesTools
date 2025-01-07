@@ -10,7 +10,7 @@ $ cd NesTools
 $ pip install -r requirements.txt
 ```
 
-##   Get started
+## 🍰 Get started
 
 Our test data can be found in `data/test_data.jsonl`.
 
@@ -35,13 +35,12 @@ bash build_test_prompt.sh
 ```
 
 ### Evaluation
-1. Set your api key and url in `data_construction/settings.py`.
+1. Set your api key and url in `evaluation/eval.py`.
 2. Start the evaluation:
 
 ```bash
 bash build_test_prompt.sh
 ```
-
 
 
 
