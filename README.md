@@ -12,26 +12,31 @@ $ pip install -r requirements.txt
 
 ##   Get started
 
-### data construction
-Our test data can be found in data/test_data.jsonl.
+Our test data can be found in `data/test_data.jsonl`.
+
+### Data construction
 
 If you want to experience our data construction method, please follow the steps:
-Set your api key and url in data_construction/settings.py. You can change the ICL example to satisfy your taste.
+1. Set your api key and url in `data_construction/settings.py`. 
+Meanwhile, you can change the ICL examples to satisfy your taste in `data_construction/settings.py`.
+2. Start the data construction:
+
 ```bash
 python data_construction/main.py --refine
 ```
 
-### build evaluation settings
-Our test prompt can be found in inference/test_prompt.jsonl, which can be used for evaluation directly or as a reference.
+### Build evaluation settings
+Our test prompt can be found in `inference/test_prompt.jsonl`, which can be used for evaluation directly or as a reference.
 
-Downloading [gte-large-en-v1.5](https://huggingface.co/Alibaba-NLP/
-gte-large-en-v1.5) or any other retrievers.
+Downloading [gte-large-en-v1.5](https://huggingface.co/Alibaba-NLP/gte-large-en-v1.5) or other embedding models.
 
 ```bash
 bash build_test_prompt.sh
 ```
 
-### Evaluate
+### Evaluation
+1. Set your api key and url in `data_construction/settings.py`.
+2. Start the evaluation:
 
 ```bash
 bash build_test_prompt.sh
