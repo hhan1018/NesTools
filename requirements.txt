@@ -1,0 +1,5 @@
+openai
+langchain
+langchain_community
+rouge==1.0.1
+pydantic>=2.7.1
