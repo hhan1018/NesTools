@@ -2,6 +2,13 @@
 
 Code and data for our paper: [NesTools: A Dataset for Evaluating Nested Tool Learning Abilities of Large Language Models](https://arxiv.org/abs/2410.11805)
 
+## News
+
+- **[2025.01.09]** Release the code for inference and evaluation.
+- **[2025.01.08]** Release the data and code for data construction.
+- **[2025.01.07]** Paper available on [ArXiv](https://arxiv.org/abs/2410.11805).
+
+
 ## 🔨 Preparations
 
 ```bash
@@ -31,15 +38,21 @@ Our test prompt can be found in `inference/test_prompt.jsonl`, which can be used
 Downloading [gte-large-en-v1.5](https://huggingface.co/Alibaba-NLP/gte-large-en-v1.5) or other embedding models.
 
 ```bash
-bash build_test_prompt.sh
+bash scripts/build.sh
+```
+
+### Inference
+1. Set your api key and url in `scripts/inference.sh`.
+2. Start the Inference process:
+
+```bash
+bash scripts/inference.sh
 ```
 
 ### Evaluation
-1. Set your api key and url in `evaluation/eval.py`.
-2. Start the evaluation:
 
 ```bash
-bash build_test_prompt.sh
+bash scripts/eval.sh
 ```
 
 
