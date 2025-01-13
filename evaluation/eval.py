@@ -44,12 +44,11 @@ def eval(
     else:
         raise ValueError("structure_key should be int or list")
 
-    csv_file = "evaluation/results.csv"
     file_exists = os.path.isfile(result_path)
 
-    result_file = open(csv_file, mode="w", newline="")
-    writer = csv.writer(result_file)
     if not file_exists:
+        result_file = open(result_path, mode="w", newline="")
+        writer = csv.writer(result_file)
         header = [
             "Model/Test File Path",
             "Format accuracy",
@@ -69,7 +68,7 @@ def eval(
         ]
         writer.writerow(header)
     else:
-        raise ValueError("Output file path already exists")
+        raise ValueError("Output file path already exists, please change the output path")
 
     print("*************start**************")
 
