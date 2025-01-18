@@ -1,12 +1,11 @@
 # NesTools: A Dataset for Evaluating Nested Tool Learning Abilities of Large Language Models
 
-Code and data for our paper: [NesTools: A Dataset for Evaluating Nested Tool Learning Abilities of Large Language Models](https://arxiv.org/abs/2410.11805)
+Code and data for our paper: **NesTools: A Dataset for Evaluating Nested Tool Learning Abilities of Large Language Models**. [[Paper](https://arxiv.org/abs/2410.11805)]
 
 ## News
-
+- **[2025.01.13]** Release the scripts and the remaining code.
 - **[2025.01.09]** Release the code for inference and evaluation.
 - **[2025.01.08]** Release the data and code for data construction.
-- **[2025.01.07]** Paper available on [ArXiv](https://arxiv.org/abs/2410.11805).
 
 
 ## 🔨 Preparations
@@ -33,23 +32,30 @@ python data_construction/main.py --refine
 ```
 
 ### Build evaluation settings
-Our test prompt can be found in `inference/test_prompt.jsonl`, which can be used for evaluation directly or as a reference.
 
-Downloading [gte-large-en-v1.5](https://huggingface.co/Alibaba-NLP/gte-large-en-v1.5) or other embedding models.
+1. Downloading gte-large-en-v1.5[link](https://huggingface.co/Alibaba-NLP/gte-large-en-v1.5) or other embedding models. 
+2. Modify the path of the embedding model in `scripts/build.sh`.
+3. Start the process:
 
 ```bash
 bash scripts/build.sh
 ```
 
 ### Inference
+**[Note]** Our test prompt can be found in `inference/test_prompt.jsonl`, which can be used for evaluation directly or as a reference.
+
 1. Set your api key and url in `scripts/inference.sh`.
-2. Start the Inference process:
+2. Modify the model name and output path in `scripts/inference.sh`.
+3. Start the Inference process:
 
 ```bash
 bash scripts/inference.sh
 ```
 
 ### Evaluation
+1. Modify the output path for storing model inference results in `scripts/eval.sh`.
+2. Choose the command corresponding to the evaluation mode in `scripts/eval.sh`.
+3. Start the Evaluation process:
 
 ```bash
 bash scripts/eval.sh
