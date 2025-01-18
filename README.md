@@ -1,6 +1,6 @@
 # NesTools: A Dataset for Evaluating Nested Tool Learning Abilities of Large Language Models
 
-Code and data for our paper: **NesTools: A Dataset for Evaluating Nested Tool Learning Abilities of Large Language Models**[[Paper](https://arxiv.org/abs/2410.11805)].
+Code and data for our paper: **NesTools: A Dataset for Evaluating Nested Tool Learning Abilities of Large Language Models** [[Paper](https://arxiv.org/abs/2410.11805)].
 
 ## News
 - **[2025.01.13]** Release the scripts and the remaining code.
@@ -33,7 +33,7 @@ python data_construction/main.py --refine
 
 ### Build evaluation settings
 
-1. Downloading gte-large-en-v1.5[[link](https://huggingface.co/Alibaba-NLP/gte-large-en-v1.5)] or other embedding models. 
+1. Downloading gte-large-en-v1.5 [[link](https://huggingface.co/Alibaba-NLP/gte-large-en-v1.5)] or other embedding models. 
 2. Modify the path of the embedding model in `scripts/build.sh`.
 3. Start the process:
 
